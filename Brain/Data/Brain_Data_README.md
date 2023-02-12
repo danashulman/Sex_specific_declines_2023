@@ -1,0 +1,19 @@
+# Sex_specific_declines_2023 / Brain / Data
+This project supports the work in 'Sex-specific declines in cholinergic-targeting tRNA fragments in the nucleus accumbens in Alzheimer’s disease' by Shulman et al. 
+
+# Data discription:
+1. Short RNA-Seq from Nucleus Accumbens, Hypothalamus and STG, and long RNA-Seq from Nucleus Accumbens and Hypothalamus:
+Data derived from participants in the Rush Alzheimer's Disease Center (RADC) ROS and MAP cohorts. Both studies were approved by an Institutional Review Board of Rush University Medical Center and all participants signed informed and repository consents and an Anatomic Gift Act. All participants in ROSMAP enroll without dementia and agree to annual clinical evaluation and brain donation at the time of death. Post-mortem brain tissues were collected from the noted brain regions of over 65 years old adults without known dementia at enrollment, recruited for the ROS and MAP projects1; 196 post-mortem samples were from the NAc (119 females, 77 males), 71 from the STG (36 females, 35 males) and 181 from the hypothalamus (120 females, 61 males). 
+The condition of the participants was set separately for each trait; cognitive state was set by the clinical diagnosis at time of death (NCI: cogdx score of 1; MCI: 2; AD: 4), neurofibrillary tangle (NFT) state by the semiquantitative measure of severity of NFT pathology (NCI: Braak score of 0-2; MCI: 3-4; AD: 5-6) and the neuritic plaque state was set by the semi-quantitative measure of neuritic plaques (NCI: Cerad score of 1-2; AD: 3-4; in accordance with the recommendation for binary division. 
+Libraries constructed from total RNA were subjected to small RNA-Seq (NEBNext Multiplex Small RNA library prep set for Illumina, New England Biolabs), and sequenced using the Illumina NextSeq 500 platform. Presequencing Bioanalyzer 6000 Quality control was performed using FastQC, and served for adapter trimming and quality-based filtering of all raw reads, and to determine RNA Integrity Number (RIN) tissue values. Samples with RIN < 5 were filtered out. Small RNA was aligned to miRBase using miRexpress and to the tRNA transcriptome using the MINTmap. Long RNA was aligned to the human reference transcriptome for the NAc and hypothalamic samples, but not the STG (ENSEMBL GRCh38 release 79).
+2. long RNA-Seq from STG:
+Long-RNA STG sequencing files were obtained via controlled access to the AD Knowledge Portal (https://www.synapse.org/#!Synapse:syn2580853/files/). These data were generated from postmortem STG of 377 volunteers (242 females, 135 males) provided by Dr. Eric Schadt from Mount Sinai School of Medicine, NY. Samples with RIN < 5 were filtered out, leaving 211 samples (136 females, 75 males). Clinical dementia rating scale (CDR) was used to classify subjects as no cognitive deficits (CDR=0) and AD (CDR=3-5), leaving 155 samples (98 females, 57 males).
+
+# Files:
+1. Normalized tRF count table: tRF counts normalized by Deseq2 'Median of ratios' method, separated by group (all/females/males) and tissue (nuc/hyp/STG).
+2. Normalized miRNA count table: miRNA counts normalized by Deseq2 'Median of ratios' method, separated by group (all/females/males) and tissue (nuc/hyp/STG).
+3. Normalized mRNA count table: mRNA counts normalized by Deseq2 'Median of ratios' method, separated by group (all/females/males) and tissue (nuc/hyp/STG).
+4. Raw tRF count table: tRF counts normalized by Deseq2 'Median of ratios' method, separated by group (all/females/males) and tissue (nuc/hyp/STG).
+5. Raw miRNA count table: miRNA counts normalized by Deseq2 'Median of ratios' method, separated by group (all/females/males) and tissue (nuc/hyp/STG).
+6. Raw mRNA count table: mRNA counts normalized by Deseq2 'Median of ratios' method, separated by group (all/females/males) and tissue (nuc/hyp/STG).
+7. tRF meta: tRF metadata from alignement to MintMap separated by tissue (nuc/hyp/STG).
